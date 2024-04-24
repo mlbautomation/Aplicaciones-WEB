@@ -46,10 +46,19 @@ func Slices() {
 	fmt.Println("Capacidad del slice 'animals':", cap(animals))
 
 	//Declarando slice vacios
-	var new_slice_1 []int         //Forma 1
-	new_slice_2 := []int{}        //Forma 2
-	new_slice_3 := make([]int, 0) //Forma 3: make([]tipo de variable,tamaño,capacidad)
+	var new_slice_1 []int            //Forma 1
+	new_slice_2 := []int{}           //Forma 2
+	new_slice_3 := make([]int, 0, 8) //Forma 3: make([]tipo de variable,tamaño,capacidad)
 	fmt.Println("---------------------------")
-	fmt.Println(new_slice_1, new_slice_2, new_slice_3)
-
+	fmt.Println("new_slice_1:", new_slice_1)
+	fmt.Println("Tamaño del slice 'new_slice_1':", len(new_slice_1))
+	fmt.Println("Capacidad del slice 'new_slice_1':", cap(new_slice_1))
+	fmt.Println("---------------------------")
+	fmt.Println("new_slice_2:", new_slice_2)
+	fmt.Println("Tamaño del slice 'new_slice_2':", len(new_slice_2))
+	fmt.Println("Capacidad del slice 'new_slice_2':", cap(new_slice_2))
+	fmt.Println("---------------------------")
+	fmt.Println("new_slice_3:", new_slice_3)
+	fmt.Println("Tamaño del slice 'new_slice_3':", len(new_slice_3))
+	fmt.Println("Capacidad del slice 'new_slice_3':", cap(new_slice_3))
 }

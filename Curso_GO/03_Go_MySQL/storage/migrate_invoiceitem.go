@@ -125,7 +125,7 @@ func (s *MySQLInvoiceItem) GetByID(id uint) (*invoiceitem.Model, error) {
 // Función helper ya que se utiliza tanto en GetAll() GetById()
 // GetAll() - sql.Rows type - Implementa método Scan()
 // GetById() - sql.Row type - Implementa método Scan()
-// Se crea interfaz "scanner" que contiene método Scan()
+// Se crea interfaz "scanner" que contiene método Scan(), ver en storage/storage
 // Se utiliza como argumento de entrada para la función helper
 func scanRowInvoiceItem(s scanner) (*invoiceitem.Model, error) {
 	m := &invoiceitem.Model{}

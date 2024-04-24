@@ -55,7 +55,7 @@ func dbProduct() {
 	fmt.Println(mProduct.String())
 	fmt.Println("----------------------------------------------------------------------------")
 	//Borrar un registro en la tabla por id
-	err = storageProduct.Delete(2)
+	err = storageProduct.Delete(3)
 	if err != nil {
 		log.Fatalf("Delete() en tabla products: %v", err)
 	}

@@ -35,7 +35,7 @@ func Basico() {
 	leer_archivo()
 
 	//Tratamiento externo del ERROR
-	resultado, err := dividir(8, 3)
+	resultado, err := dividir(8, 4)
 	if err != nil {
 		fmt.Println("Ocurrio un error:", err)
 		return
@@ -78,7 +78,7 @@ func leer_archivo() {
 	fmt.Println(string(Contenido))
 }
 
-// Trabajaremos con estas variables fuera de la funciónS
+// Trabajaremos con estas variables fuera de la funciónes
 func dividir(dividendo, divisor int) (resultado int, err error) {
 	if divisor == 0 {
 		err = errors.New("no puedes dividir entre cero")

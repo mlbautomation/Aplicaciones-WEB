@@ -1,3 +1,8 @@
+/* 
+Aquí comandos de MySQL para probar que todo esta funcionando ok 
+LOCAL INSTANCE MYSQL80, Usuario: admin / password: admin (este ultimo yo lo colequé al instalar MySQL)
+*/
+
 select * from products
 select * from clients
 select * from invoice_items
@@ -19,5 +24,8 @@ CREATE TABLE IF NOT EXISTS products
 INSERT INTO products (name, price) VALUES ('Marlon', '25')
 
 SELECT id, name, observations, price, created_at, updated_at FROM products WHERE id = 2
-
 SELECT id, name, observations, price, created_at, updated_at FROM products WHERE id like 3
+
+DROP TABLE `mlbauto`.`products`;
+DROP TABLE `mlbauto`.`clients`;
+DROP TABLE `mlbauto`.`invoice_items`;

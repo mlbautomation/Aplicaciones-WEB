@@ -3,7 +3,9 @@ package arrays
 import "fmt"
 
 func Arrays() {
-	//Trabajando con arrays, solo 2 formas de declaración, Forma 1
+	//Trabajando con arrays, solo 2 formas de declaración.
+
+	//Forma 1
 	var food [2]string
 	food[0] = "🍍"
 	food[1] = "🍕"

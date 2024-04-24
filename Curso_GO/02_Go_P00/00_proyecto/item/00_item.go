@@ -13,9 +13,9 @@ type GetterPrecio interface {
 }
 
 type Item interface {
+	GetterId
 	GetterDescripcion
 	GetterPrecio
-	GetterId
 }
 
 type Items []Item

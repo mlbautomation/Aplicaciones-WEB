@@ -42,6 +42,7 @@ func LoopForRange() {
 	for indice, valor := range cadena {
 		//El valor corresponde a los bytes de cada letra, para esto usar string()
 		fmt.Println("Indice:", indice, "Valor:", string(valor))
+		//fmt.Println("Indice:", indice, "Valor:", valor)
 	}
 
 }

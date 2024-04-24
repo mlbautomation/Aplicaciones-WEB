@@ -140,6 +140,9 @@ func (s *MySQLProduct) Update(m *product.Model) error {
 		m.UpdatedAt,
 		m.ID,
 	)
+	if err != nil {
+		return err
+	}
 	fmt.Printf("Se realiza actualización del registro %v en MySQL - products\n", m.ID)
 	return nil
 }
@@ -152,6 +155,9 @@ func (s *MySQLProduct) Delete(id uint) error {
 	defer stmt.Close()
 
 	_, err = stmt.Exec(id)
+	if err != nil {
+		return err
+	}
 	fmt.Printf("Se realiza borrado del registro %v en MySQL - products\n", id)
 	return nil
 }
@@ -159,7 +165,7 @@ func (s *MySQLProduct) Delete(id uint) error {
 // Función helper ya que se utiliza tanto en GetAll() GetById()
 // GetAll() - sql.Rows type - Implementa método Scan()
 // GetById() - sql.Row type - Implementa método Scan()
-// Se crea interfaz "scanner" que contiene método Scan()
+// Se crea interfaz "scanner" que contiene método Scan(), ver en storage/storage
 // Se utiliza como argumento de entrada para la función helper
 func scanRowProduct(s scanner) (*product.Model, error) {
 	m := &product.Model{}

@@ -6,18 +6,18 @@ import (
 )
 
 func Especial() {
-	//Función Defer guarda el valor de la variable del momento en el que fue ejecutado
+	//Función Defer es la ultima accion que se realiza al finalizar una función
 	//Función Panic finaliza la ejecución del programa
 	//
 
 	a := 5
-	defer fmt.Println("Defer:", a)
+	defer fmt.Println("Esta es la ultima acción, Defer:", a)
 
 	a = 10
-	fmt.Println(a)
+	fmt.Println("Esta es la ultima acción", a)
 
 	//Creando archivos
-	file, err := os.Create("hello.txt")
+	file, err := os.Create("./01_Go_desde_0/03_funciones/03_especial/hello.txt")
 	if err != nil {
 		fmt.Printf("Ocurrio un error al crear el archivo: %v", err)
 		return
@@ -31,7 +31,7 @@ func Especial() {
 		fmt.Printf("Ocurrio un error al escribir el archivo: %v", err)
 		return
 	}
-	fmt.Printf("Tipo: %T, Valor: %v\n", bytes, bytes)
+	fmt.Printf("Tipo bytes (tamaño): %T, Valor: %v\n", bytes, bytes)
 
 	division(10, 2)
 	division(5, 0)
@@ -49,7 +49,7 @@ func division(x, y int) {
 		}
 	}()
 	verificar_division(y)
-	println(x / y)
+	println("Resultado del operación: ", x/y)
 }
 
 func verificar_division(y int) {
